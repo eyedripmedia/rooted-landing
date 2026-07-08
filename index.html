@@ -1,309 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rooted — Know your roots. Grow your garden.</title>
-  <meta name="description" content="An iOS companion for serious home growers, built on AI and patience. Diagnose by photo, journal everything, build a streak that rewards action. Now on the App Store.">
-
-  <meta property="og:title" content="Rooted — Know your roots. Grow your garden.">
-  <meta property="og:description" content="An iOS companion for serious home growers, built on AI and patience. Now on the App Store.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://growwithrooted.com">
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Rooted — Know your roots. Grow your garden.">
-  <meta name="twitter:description" content="An iOS companion for serious home growers, built on AI and patience. Now on the App Store.">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500;1,9..144,600&display=swap" rel="stylesheet">
-
+  <meta name="description" content="A premium garden companion for people who actually grow food. Track every plant, diagnose problems from a photo, and get expert AI help. Now on the App Store." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Rooted — Garden Companion" />
+  <meta property="og:description" content="Track every plant, diagnose problems from a photo, and grow like a pro. Now on the App Store." />
+  <meta property="og:url" content="https://growwithrooted.com" />
+  <meta property="og:image" content="https://growwithrooted.com/assets/garden/lush-bed.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Rooted — Garden Companion" />
+  <meta name="twitter:description" content="Track every plant, diagnose problems from a photo, and grow like a pro. Now on the App Store." />
+  <meta name="twitter:image" content="https://growwithrooted.com/assets/garden/lush-bed.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500;1,9..144,600&display=swap" rel="stylesheet" />
   <style>
-    *, *::before, *::after { box-sizing: border-box; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: Georgia, 'Times New Roman', serif;
-      color: #1a1a1a;
-      background: #EDF0E8;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+    :root { --forest: #174038; --sage: #EDF0E8; --cream: #FBFAF6; --terracotta: #C47454; --cream-sage: #c8dbb0; --sage-muted: #75806C; --ink: #2a2f28; }
+    body { font-family: Georgia, 'Times New Roman', serif; background: var(--sage); color: var(--ink); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+    .kicker { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sage-muted); display: inline-flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+    .kicker::before { content: ""; display: block; width: 28px; height: 1px; background: var(--terracotta); }
+    .kicker--light { color: var(--cream-sage); }
+    h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; font-style: italic; font-weight: 400; line-height: 1.08; }
+    .hero { background: var(--forest); color: var(--cream); padding: 72px 0 84px; overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: 1fr 0.82fr; gap: 56px; align-items: center; }
+    .hero-logo { height: 40px; width: auto; margin-bottom: 32px; opacity: 0.96; }
+    .hero h1 { font-size: clamp(44px, 6vw, 78px); margin-bottom: 24px; }
+    .hero h1 .accent { color: var(--terracotta); }
+    .hero-lede { font-size: 19px; color: var(--cream-sage); max-width: 30ch; margin-bottom: 36px; }
+    .appstore-badge { display: inline-block; transition: opacity 0.2s ease; }
+    .appstore-badge:hover { opacity: 0.85; }
+    .appstore-badge img { height: 54px; width: auto; display: block; }
+    .phone { position: relative; width: 100%; max-width: 320px; margin: 0 auto; aspect-ratio: 9 / 19.5; background: #0d0d0d; border-radius: 40px; box-shadow: 0 24px 60px rgba(0,0,0,0.28), 0 4px 12px rgba(0,0,0,0.18); }
+    .phone::after { content: ""; position: absolute; top: 20px; left: 50%; transform: translateX(-50%); width: 108px; height: 26px; background: #0d0d0d; border-radius: 0 0 16px 16px; z-index: 3; }
+    .phone-screen { position: absolute; top: 11px; left: 11px; right: 11px; bottom: 11px; border-radius: 30px; overflow: hidden; background: #0d0d0d; }
+    .phone-screen img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
+    .phone-screen video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; }
+    .wedge { background: var(--sage); padding: 88px 0; text-align: center; }
+    .wedge h2 { font-size: clamp(30px, 4vw, 46px); max-width: 20ch; margin: 0 auto 20px; color: var(--forest); }
+    .wedge p { font-size: 18px; color: var(--sage-muted); max-width: 44ch; margin: 0 auto; }
+    .wedge .terra { color: var(--terracotta); font-style: italic; }
+    .feature { padding: 80px 0; }
+    .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .feature.flip .feature-grid { direction: rtl; }
+    .feature.flip .feature-grid > * { direction: ltr; }
+    .feature-copy h3 { font-size: clamp(28px, 3.4vw, 40px); margin-bottom: 18px; color: var(--forest); }
+    .feature-copy p { font-size: 17px; color: var(--ink); max-width: 42ch; }
+    .feature-copy .lead { color: var(--sage-muted); }
+    .feature.bg-cream { background: var(--cream); }
+    .feature.bg-sage { background: var(--sage); }
+    .garden { background: var(--forest); color: var(--cream); padding: 88px 0; text-align: center; }
+    .garden h2 { font-size: clamp(28px, 3.6vw, 44px); max-width: 22ch; margin: 0 auto 16px; }
+    .garden .terra { color: var(--terracotta); }
+    .garden-lede { color: var(--cream-sage); max-width: 40ch; margin: 0 auto 48px; font-size: 17px; }
+    .garden-photos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .garden-caption { margin-top: 32px; font-family: 'Fraunces', Georgia, serif; font-style: italic; color: var(--cream-sage); font-size: 22px; }
+    .garden-caption .terra { color: var(--terracotta); }
+    .garden-photos img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 12px; display: block; }
+    .cta { background: var(--sage); padding: 96px 0; text-align: center; }
+    .cta h2 { font-size: clamp(32px, 4.4vw, 52px); color: var(--forest); margin-bottom: 18px; max-width: 18ch; margin-left: auto; margin-right: auto; }
+    .cta p { font-size: 18px; color: var(--sage-muted); margin-bottom: 36px; }
+    .cta .appstore-badge img { height: 58px; margin: 0 auto; }
+    footer { background: var(--forest); color: var(--cream-sage); padding: 64px 0 48px; font-size: 14px; }
+    .footer-grid { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 32px; }
+    .footer-brand img { height: 30px; margin-bottom: 14px; }
+    .footer-brand p { max-width: 30ch; color: var(--sage-muted); font-size: 13px; }
+    .footer-links a { color: var(--cream-sage); text-decoration: none; display: block; margin-bottom: 10px; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--cream); }
+    .footer-col h4 { font-family: Georgia, serif; font-style: normal; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sage-muted); margin-bottom: 14px; font-weight: normal; }
+    .footer-legal { margin-top: 48px; padding-top: 24px; border-top: 1px solid rgba(200,219,176,0.16); color: var(--sage-muted); font-size: 12px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    @media (max-width: 860px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 48px; text-align: center; }
+      .hero-logo, .hero-lede { margin-left: auto; margin-right: auto; }
+      .feature-grid { grid-template-columns: 1fr; gap: 40px; }
+      .feature.flip .feature-grid { direction: ltr; }
+      .feature-copy { text-align: center; }
+      .feature-copy p { margin-left: auto; margin-right: auto; }
+      .phone { max-width: 280px; }
+      .garden-photos { grid-template-columns: 1fr 1fr; }
+      .footer-grid { flex-direction: column; }
     }
-
-    .container { max-width: 720px; margin: 0 auto; padding: 0 28px; }
-
-    section { padding: 96px 0; }
-    @media (max-width: 600px) { section { padding: 72px 0; } }
-
-    .kicker {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      font-family: Georgia, serif;
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: #75806C;
-      margin-bottom: 20px;
-    }
-    .kicker::before {
-      content: '';
-      display: block;
-      width: 28px;
-      height: 1px;
-      background: #C47454;
-    }
-    .kicker--light { color: #c8dbb0; }
-
-    .hero { background: #174038; color: #c8dbb0; padding: 112px 0 128px; }
-    @media (max-width: 600px) { .hero { padding: 80px 0 96px; } }
-    .hero h1 {
-      font-family: 'Fraunces', Georgia, serif;
-      font-style: italic;
-      font-weight: 500;
-      font-size: clamp(48px, 8vw, 84px);
-      line-height: 1.05;
-      letter-spacing: -0.01em;
-      margin: 8px 0 28px;
-      color: #EDF0E8;
-    }
-    .hero h1 span { display: block; }
-    .hero p.lede {
-      font-size: 18px;
-      line-height: 1.55;
-      max-width: 540px;
-      margin: 0 0 44px;
-      color: #c8dbb0;
-    }
-
-    .signup { max-width: 480px; }
-    .signup-form { display: flex; flex-direction: column; gap: 12px; }
-    @media (min-width: 560px) {
-      .signup-form { flex-direction: row; }
-      .signup-form input { flex: 1; }
-    }
-    .signup-form input {
-      padding: 14px 18px;
-      font-family: Georgia, serif;
-      font-size: 15px;
-      background: rgba(237, 240, 232, 0.08);
-      color: #EDF0E8;
-      border: 1px solid rgba(196, 116, 84, 0.4);
-      border-radius: 4px;
-      outline: none;
-      transition: border-color 0.2s;
-    }
-    .signup-form input::placeholder { color: rgba(237, 240, 232, 0.45); }
-    .signup-form input:focus { border-color: #C47454; }
-    .signup-form button {
-      padding: 14px 24px;
-      font-family: Georgia, serif;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      background: #C47454;
-      color: #FBFAF6;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background 0.2s;
-      white-space: nowrap;
-    }
-    .signup-form button:hover { background: #b56548; }
-    .signup .success {
-      font-family: 'Fraunces', Georgia, serif;
-      font-style: italic;
-      font-size: 18px;
-      color: #c8dbb0;
-      margin: 0;
-      display: none;
-    }
-    .signup.submitted .signup-form { display: none; }
-    .signup.submitted .success { display: block; }
-
-    .prose { background: #EDF0E8; color: #1a1a1a; }
-    .prose h2 {
-      font-family: 'Fraunces', Georgia, serif;
-      font-style: italic;
-      font-weight: 500;
-      font-size: clamp(34px, 5vw, 48px);
-      line-height: 1.15;
-      letter-spacing: -0.005em;
-      margin: 0 0 32px;
-      max-width: 600px;
-      color: #174038;
-    }
-    .prose p { font-size: 19px; line-height: 1.7; max-width: 600px; margin: 0; }
-
-    .features { background: #FBFAF6; color: #1a1a1a; }
-    .features .section-title {
-      font-family: 'Fraunces', Georgia, serif;
-      font-style: italic;
-      font-weight: 500;
-      font-size: clamp(30px, 4.5vw, 40px);
-      margin: 0 0 56px;
-      color: #174038;
-      max-width: 540px;
-      line-height: 1.2;
-    }
-    .feature { padding: 32px 0; border-top: 1px solid #CDD8C5; }
-    .feature:first-of-type { border-top: none; padding-top: 0; }
-    .feature .kicker { margin-bottom: 12px; }
-    .feature h3 {
-      font-family: 'Fraunces', Georgia, serif;
-      font-style: italic;
-      font-weight: 500;
-      font-size: clamp(22px, 3vw, 28px);
-      line-height: 1.25;
-      margin: 0 0 16px;
-      color: #174038;
-    }
-    .feature p { font-size: 17px; line-height: 1.6; max-width: 580px; margin: 0; }
-
-    .launch { background: #174038; color: #EDF0E8; text-align: center; padding: 96px 0; }
-    @media (max-width: 600px) { .launch { padding: 72px 0; } }
-    .launch .kicker { justify-content: center; }
-    .launch h2 {
-      font-family: 'Fraunces', Georgia, serif;
-      font-style: italic;
-      font-weight: 500;
-      font-size: clamp(54px, 9vw, 92px);
-      line-height: 1;
-      letter-spacing: -0.015em;
-      margin: 8px 0 20px;
-      color: #EDF0E8;
-    }
-    .launch p.lede { font-size: 18px; color: #c8dbb0; margin: 0 0 44px; }
-    .launch .signup { margin: 0 auto; }
-
-    footer {
-      background: #174038;
-      color: #c8dbb0;
-      padding: 56px 0 48px;
-      text-align: center;
-      border-top: 1px solid rgba(196, 116, 84, 0.18);
-    }
-    footer .closing {
-      font-family: 'Fraunces', Georgia, serif;
-      font-style: italic;
-      font-size: 22px;
-      color: #EDF0E8;
-      margin: 0 0 36px;
-    }
-    footer .links { font-size: 13px; letter-spacing: 0.4px; margin-bottom: 24px; }
-    footer .links a {
-      color: #c8dbb0;
-      text-decoration: none;
-      margin: 0 12px;
-      transition: color 0.2s;
-    }
-    footer .links a:hover { color: #C47454; }
-    footer .legal {
-      font-size: 12px;
-      color: rgba(200, 219, 176, 0.7);
-      line-height: 1.6;
-      margin: 0;
-    }
-  
-    .appstore-badge { display: inline-block; text-decoration: none; transition: transform .15s ease; }
-    .appstore-badge:hover { transform: translateY(-1px); }
-    .appstore-badge img { display: block; height: 54px; width: auto; }
   </style>
-  <!-- Vercel Web Analytics -->
-  <script>
-    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-  </script>
-  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
-
-  <section class="hero">
-    <div class="container">
-      <span class="kicker kicker--light">Rooted</span>
-      <h1>
-        <span>Know your roots.</span>
-        <span>Grow your garden.</span>
-      </h1>
-      <p class="lede">An iOS companion for serious home growers, built on AI and patience. Now on the App Store.</p>
-      <a class="appstore-badge" href="https://apps.apple.com/app/id6761402824" aria-label="Download Rooted on the App Store">
-        <img src="app-store-badge.svg" alt="Download on the App Store" />
-      </a>
+  <section class="hero"><div class="wrap hero-grid">
+    <div class="hero-copy">
+      <img class="hero-logo" src="assets/brand/logo.png" alt="Rooted" />
+      <span class="kicker kicker--light">Now on the App Store</span>
+      <h1>Know your roots.<br /><span class="accent">Grow</span> your garden.</h1>
+      <p class="hero-lede">The garden companion for people who actually grow food — outdoors, in beds, in the ground.</p>
+      <a class="appstore-badge" href="https://apps.apple.com/app/id6761402824"><img src="app-store-badge.svg" alt="Download on the App Store" /></a>
     </div>
-  </section>
-
-  <section class="prose">
-    <div class="container">
-      <span class="kicker">What it is</span>
-      <h2>Discover a plant, save it, grow it.</h2>
-      <p>Rooted is an iOS companion for serious home gardeners. Photograph any plant for instant identification and health analysis. Track every watering, journal entry, and harvest in one place — built for people who care about doing it well.</p>
-    </div>
-  </section>
-
-  <section class="features">
-    <div class="container">
-      <span class="kicker">Three things it does</span>
-      <h2 class="section-title">Built for serious gardeners, not casual houseplant owners.</h2>
-
-      <div class="feature">
-        <span class="kicker">Diagnose</span>
-        <h3>Diagnose by photograph.</h3>
-        <p>Point your camera at any plant or leaf. Get instant species identification, health diagnosis, and specific treatment guidance — powered by AI trained on serious gardening, not casual houseplant care.</p>
+    <div class="hero-visual"><div class="phone"><div class="phone-screen"><video src="assets/video/hero-loop.mp4" autoplay muted loop playsinline></video></div></div></div>
+  </div></section>
+  <section class="wedge"><div class="wrap">
+    <h2>Not another houseplant app.</h2>
+    <p>Rooted is built for the <span class="terra">vegetable garden</span> — the raised beds, the tomatoes, the harvest. Real growing, done well.</p>
+  </div></section>
+  <section class="feature bg-cream"><div class="wrap feature-grid">
+    <div class="feature-copy"><span class="kicker">Diagnose</span><h3>Spot trouble before it spreads.</h3><p><span class="lead">Snap a photo of a struggling plant and get an instant health read</span> — what's wrong, why, and exactly what to do about it. Powered by AI trained on the problems real gardeners face.</p></div>
+    <div class="feature-visual"><div class="phone"><div class="phone-screen"><img src="assets/screens/health-result.png" alt="Rooted health scan result" /></div></div></div>
+  </div></section>
+  <section class="feature bg-sage flip"><div class="wrap feature-grid">
+    <div class="feature-copy"><span class="kicker">Discover</span><h3>Every plant, beautifully documented.</h3><p><span class="lead">Rich, editorial guides for what you grow</span> — planting windows, care, companions, and harvest timing. Less encyclopedia, more field guide worth reading.</p></div>
+    <div class="feature-visual"><div class="phone"><div class="phone-screen"><img src="assets/screens/plant-detail.png" alt="Rooted plant detail page" /></div></div></div>
+  </div></section>
+  <section class="feature bg-cream"><div class="wrap feature-grid">
+    <div class="feature-copy"><span class="kicker">Track</span><h3>Your whole garden, in one place.</h3><p><span class="lead">Every bed, every plant, every task</span> — organized by where things grow. See what needs you today, keep your streak, and watch the whole garden thrive at a glance.</p></div>
+    <div class="feature-visual"><div class="phone"><div class="phone-screen"><img src="assets/screens/garden-dashboard.jpg" alt="Rooted My Garden dashboard" /></div></div></div>
+  </div></section>
+  <section class="feature bg-sage flip"><div class="wrap feature-grid">
+    <div class="feature-copy"><span class="kicker">Ask Sage</span><h3>An expert gardener in your pocket.</h3><p><span class="lead">Sage knows your garden and answers like a friend who's grown it all</span> — when to plant, why leaves are yellowing, what to do this weekend. Ask anything.</p></div>
+    <div class="feature-visual"><div class="phone"><div class="phone-screen"><img src="assets/screens/sage.jpg" alt="Rooted Sage assistant" /></div></div></div>
+  </div></section>
+  <section class="garden"><div class="wrap">
+    <span class="kicker kicker--light" style="justify-content:center;">The real thing</span>
+    <h2>For people who <span class="terra">grow their own.</span></h2>
+    <p class="garden-lede">Rooted is made for the gardeners actually out there — hands in the dirt, watching it come up, bringing it in.</p>
+    <div class="garden-photos"><img src="assets/garden/lush-bed.jpg" alt="Lush garden bed" /><img src="assets/garden/blackberry-haul.jpg" alt="Blackberry harvest" /><img src="assets/garden/ripe-fig-tree.jpg" alt="Ripe figs" /><img src="assets/garden/harvest.jpg" alt="Fresh harvest" /></div>
+    <p class="garden-caption">Tracked, grown, and harvested with Rooted<span class="terra">.</span></p>
+  </div></section>
+  <section class="cta"><div class="wrap">
+    <span class="kicker" style="justify-content:center;">It's growing season</span>
+    <h2>Start growing with Rooted.</h2>
+    <p>Free to download. Grow like you mean it.</p>
+    <a class="appstore-badge" href="https://apps.apple.com/app/id6761402824"><img src="app-store-badge.svg" alt="Download on the App Store" /></a>
+  </div></section>
+  <footer><div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="assets/brand/logo.png" alt="Rooted" /><p>A premium garden companion for people who grow their own.</p></div>
+      <div style="display:flex; gap:56px; flex-wrap:wrap;">
+        <div class="footer-col"><h4>Rooted</h4><div class="footer-links"><a href="https://apps.apple.com/app/id6761402824">Download</a></div></div>
+        <div class="footer-col"><h4>Legal</h4><div class="footer-links"><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a></div></div>
       </div>
-
-      <div class="feature">
-        <span class="kicker">Journal</span>
-        <h3>A long memory for your garden.</h3>
-        <p>Every watering, harvest, journal entry, and photograph in one place. Look back at last season to plan this one. Watch the rhythm of your garden emerge across years.</p>
-      </div>
-
-      <div class="feature">
-        <span class="kicker">Streak</span>
-        <h3>A streak that rewards growing, not scrolling.</h3>
-        <p>Opening the app doesn't count. A care action does — a watering, a journal entry, a harvest. Show up for your plants, and Rooted shows up for you.</p>
-      </div>
     </div>
-  </section>
-
-  <section class="launch">
-    <div class="container">
-      <span class="kicker kicker--light">Available now</span>
-      <h2>It's growing season.</h2>
-      <p class="lede">Rooted is live on the App Store.</p>
-      <a class="appstore-badge" href="https://apps.apple.com/app/id6761402824" aria-label="Download Rooted on the App Store">
-        <img src="app-store-badge.svg" alt="Download on the App Store" />
-      </a>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <p class="closing">Know your roots. Grow your garden.</p>
-      <div class="links">
-        <a href="/privacy">Privacy</a>
-        <a href="/terms">Terms</a>
-        <a href="mailto:hello@growwithrooted.com">Contact</a>
-      </div>
-      <p class="legal">
-        Rooted is a product of Paleo Holdings, LLC.<br>
-        © 2026 Paleo Holdings, LLC. All rights reserved.
-      </p>
-    </div>
-  </footer>
-
-  <script>
-    document.querySelectorAll('form.signup').forEach(function(form) {
-      form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        var email = this.querySelector('input[type="email"]').value;
-        console.log('Email captured:', email, '| Form:', this.dataset.form);
-        this.classList.add('submitted');
-      });
-    });
-  </script>
-
+    <div class="footer-legal"><span>&copy; 2026 Paleo Holdings LLC. All rights reserved.</span><span>growwithrooted.com</span></div>
+  </div></footer>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
