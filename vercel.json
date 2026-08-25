@@ -1,3 +1,6 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/wiki/:slug", "destination": "https://rooted-backend-production.up.railway.app/wiki/:slug" }
+  ]
 }
