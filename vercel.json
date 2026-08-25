@@ -1,6 +1,13 @@
 {
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/wiki/:slug", "destination": "https://rooted-backend-production.up.railway.app/wiki/:slug" }
+    {
+      "source": "/wiki/:slug",
+      "destination": "https://rooted-backend-production.up.railway.app/wiki/:slug"
+    },
+    {
+      "source": "/s/:id",
+      "destination": "https://rooted-backend-production.up.railway.app/s/:id"
+    }
   ]
 }
