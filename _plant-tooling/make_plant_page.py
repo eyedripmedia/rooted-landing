@@ -105,13 +105,16 @@ def make_og(plant):
     d.text((pad, 470), facts, font=_font(SANS, 30), fill=kicker)
     # terracotta accent bar
     d.rectangle([pad, 430, pad + 62, 434], fill=terra)
-    # Rooted chip bottom-right
-    chip = 74
-    cx, cy = W - pad - chip, H - 78 - chip
-    d.rounded_rectangle([cx, cy, cx + chip, cy + chip], radius=18, fill=forest)
-    rf = _font(SERIF_IT, 46)
-    tw = d.textlength("R", font=rf)
-    d.text((cx + (chip - tw) / 2, cy + 8), "R", font=rf, fill="#dfe7d3")
+    # Rooted app icon bottom-right (rounded)
+    icon_sz = 96
+    ix, iy = W - pad - icon_sz, H - 68 - icon_sz
+    try:
+        ico = Image.open(os.path.join(ROOT, "assets", "brand", "app-icon.png")).convert("RGBA").resize((icon_sz, icon_sz), Image.LANCZOS)
+        mask = Image.new("L", (icon_sz, icon_sz), 0)
+        ImageDraw.Draw(mask).rounded_rectangle([0, 0, icon_sz, icon_sz], radius=22, fill=255)
+        img.paste(ico, (ix, iy), mask)
+    except Exception as e:
+        print("  (icon paste failed:", e, ")")
 
     os.makedirs(OG_DIR, exist_ok=True)
     out = os.path.join(OG_DIR, plant["slug"] + ".png")
