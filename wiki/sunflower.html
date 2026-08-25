@@ -23,7 +23,7 @@
 <style>
   :root{--forest:#174038;--sage:#EDF0E8;--terra:#C47454;--cream:#FBFAF6;--muted:#7c857a;--kicker:#8e968b;--tint:#F2E5E0;--tintk:#8a4a48;}
   *{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:Georgia,serif;background:var(--sage);color:var(--forest);-webkit-font-smoothing:antialiased;line-height:1.6;}
+  body{font-family:Georgia,serif;background:var(--sage);color:var(--forest);-webkit-font-smoothing:antialiased;line-height:1.6;padding-bottom:78px;}
   img{max-width:100%;display:block;}
   a{color:inherit;}
   nav{position:sticky;top:0;z-index:20;background:rgba(237,240,232,.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(23,64,56,.08);}
@@ -84,6 +84,21 @@
     .body{grid-template-columns:1fr;gap:26px;}
     .dl{position:static;}
   }
+  .stickybar{position:fixed;left:0;right:0;bottom:0;z-index:40;background:rgba(251,250,246,.97);border-top:1px solid rgba(23,64,56,.1);box-shadow:0 -6px 20px rgba(15,42,36,.08);}
+  .sb-in{max-width:1080px;margin:0 auto;padding:11px 16px;display:flex;align-items:center;gap:12px;}
+  .sb-logo{width:38px;height:38px;border-radius:11px;background:var(--forest);color:#dfe7d3;font-family:'Fraunces',serif;font-style:italic;font-size:19px;display:flex;align-items:center;justify-content:center;flex:0 0 auto;}
+  .sb-tx{flex:1;line-height:1.25;min-width:0;}
+  .sb-t{font-family:'Fraunces',serif;font-style:italic;font-weight:600;font-size:15px;color:var(--forest);}
+  .sb-s{font-size:11px;color:var(--muted);margin-top:1px;}
+  .sb-btn{background:var(--terra);color:#fff;font-size:13.5px;padding:11px 18px;border-radius:22px;text-decoration:none;flex:0 0 auto;box-shadow:0 3px 10px rgba(196,116,84,.3);white-space:nowrap;}
+  .gate{position:fixed;left:0;right:0;bottom:0;z-index:50;transform:translateY(110%);transition:transform .35s ease;background:var(--cream);box-shadow:0 -12px 40px rgba(15,42,36,.18);border-radius:22px 22px 0 0;padding:26px 22px 24px;}
+  .gate.show{transform:translateY(0);}
+  .gate-card{max-width:520px;margin:0 auto;text-align:center;}
+  .gate-logo{width:52px;height:52px;border-radius:14px;background:var(--forest);color:#dfe7d3;font-family:'Fraunces',serif;font-style:italic;font-size:26px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;}
+  .gate h3{font-family:'Fraunces',serif;font-style:italic;font-weight:600;font-size:23px;color:var(--forest);margin-bottom:9px;}
+  .gate p{font-size:14.5px;color:#33403a;line-height:1.55;margin-bottom:18px;}
+  .gate-btn{display:block;background:var(--terra);color:#fff;text-align:center;padding:15px;border-radius:14px;font-size:16px;text-decoration:none;box-shadow:0 6px 16px rgba(196,116,84,.35);}
+  .gate-dismiss{display:block;width:100%;background:none;border:0;color:var(--muted);font-size:14px;font-family:Georgia,serif;padding:14px 0 2px;cursor:pointer;}
 </style>
 </head>
 <body>
@@ -173,5 +188,25 @@
     <div>© Rooted · growwithrooted.com</div>
     <div><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></div>
   </div></footer>
+
+  <div class="stickybar"><div class="sb-in">
+    <div class="sb-logo">R</div>
+    <div class="sb-tx"><div class="sb-t">Identify any plant, free</div><div class="sb-s">Care, water &amp; growing guides · iPhone</div></div>
+    <a class="sb-btn" href="https://apps.apple.com/us/app/rooted-garden-companion/id6761402824">Try for Free</a>
+  </div></div>
+
+  <div class="gate" id="rooted-gate" role="dialog" aria-label="Get the Rooted app">
+    <div class="gate-card">
+      <div class="gate-logo">R</div>
+      <h3>Identify any plant with a snap</h3>
+      <p>Point your camera for an instant ID — plus care, a watering schedule, and a full growing guide. Free on iPhone.</p>
+      <a class="gate-btn" href="https://apps.apple.com/us/app/rooted-garden-companion/id6761402824">Try Rooted for Free</a>
+      <button class="gate-dismiss" type="button" onclick="document.getElementById('rooted-gate').classList.remove('show')">Continue reading</button>
+    </div>
+  </div>
+
+  <script>
+  (function(){try{var r=document.referrer||'';if(/(google|bing|yahoo|duckduckgo|ecosia|baidu|yandex)\./i.test(r))return;var g=document.getElementById('rooted-gate');if(!g)return;var s=false;function h(){if(s)return;if(window.scrollY>700){s=true;g.classList.add('show');window.removeEventListener('scroll',h);}}window.addEventListener('scroll',h,{passive:true});}catch(e){}})();
+  </script>
 </body>
 </html>
