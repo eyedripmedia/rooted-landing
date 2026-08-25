@@ -1,0 +1,275 @@
+# Plant data for growwithrooted.com /wiki/<slug> pages.
+# Category tints mirror the app's CATEGORY_META (Services/categoryLists.ts).
+
+CATEGORY_META = {
+    "vegetables": {"label": "Vegetables", "tint": "#F5EDDF", "kicker": "#A05538"},
+    "herbs":      {"label": "Herbs",      "tint": "#E8EFE0", "kicker": "#5a7a5e"},
+    "flowers":    {"label": "Flowers",    "tint": "#F2E5E0", "kicker": "#8a4a48"},
+    "fruits":     {"label": "Fruits",     "tint": "#FAEBDB", "kicker": "#A06535"},
+}
+
+PLANTS = [
+    {
+        "slug": "sunflower",
+        "name": "Sunflower",
+        "sci": "Helianthus annuus",
+        "category": "flowers",
+        "type": "Annual",
+        "sun": "Full sun",
+        "water": "Deep, weekly",
+        "harvest": "90–100 days",
+        "hardiness": "Annual · everywhere",
+        "meta_desc": "How to grow sunflowers (Helianthus annuus): full sun, deep weekly water, 90–100 days to harvest. Planting, care, and grow tips from Rooted.",
+        "lede": "The extrovert of the garden — impossible to ignore, with dinner-plate faces that track the sun. Fast-growing, pollinator-friendly, and about as forgiving as a flower gets.",
+        "about_heading": "A towering giant, native to the Americas",
+        "about": [
+            "Sunflowers hail from Mexico and the American Southwest, where they've been grown for seeds, oil, and pure spectacle for thousands of years. Young plants are heliotropic — their buds swing east to west to follow the sun across the sky — before settling to face permanently east as they mature.",
+            "They're one of the most beginner-friendly plants you can grow: sow a seed in warm soil, keep it watered, and stand back. Depending on the variety, you'll get anything from a knee-high cutting flower to a ten-foot giant with a head the size of a dinner plate.",
+        ],
+        "care": [
+            "Direct-sow after your last frost, once the soil has warmed — sunflowers resent transplanting. Choose the sunniest spot you have; they want six-plus hours of direct light. Water deeply about once a week, more in real heat.",
+            "Stake tall varieties early so summer storms don't topple them. To harvest seeds, wait until the back of the head turns brown and the petals drop, then cut and let it finish drying indoors before you rub the seeds free.",
+        ],
+        "gtk_heading": "Why gardeners love them",
+        "gtk": [
+            "Beyond the show, sunflowers are workhorses: bees and butterflies feed on the blooms all summer, and finches will strip the seed heads clean in fall. Plant a row along a fence for instant privacy, or tuck a few among vegetables to pull pollinators toward your squash and cucumbers.",
+        ],
+        "family": "Asteraceae",
+        "height": "3–10 ft",
+        "bloom": "Mid–late summer",
+        "native": "The Americas",
+        "propagation": "Seed",
+    },
+    {
+        "slug": "basil",
+        "name": "Basil",
+        "sci": "Ocimum basilicum",
+        "category": "herbs",
+        "type": "Annual herb",
+        "sun": "Full sun",
+        "water": "Keep evenly moist",
+        "harvest": "60–75 days",
+        "hardiness": "Tender · frost-sensitive",
+        "meta_desc": "How to grow basil (Ocimum basilicum): full sun, even moisture, harvest in 60–75 days. Planting, pinching, and care tips from Rooted.",
+        "lede": "The soul of summer cooking — broad, glossy leaves that grow faster the more you pick them. Warmth-loving, fast, and endlessly generous.",
+        "about_heading": "The Italian herb, at home in a pot or a bed",
+        "about": [
+            "Basil is a tender annual from the tropics of Asia and Africa, prized for the sweet, clove-and-anise aroma of its leaves. Genovese is the classic pesto type, but the family runs wide — lemon, Thai, purple, and spicy globe among them.",
+            "It thrives anywhere it gets warmth and sun, which makes it as happy on a kitchen windowsill as in the garden. The secret to a bushy plant is simple: keep pinching.",
+        ],
+        "care": [
+            "Plant out only after nights stay reliably warm — basil sulks and blackens in the cold. Give it full sun and steady moisture, never letting it wilt or bone-dry.",
+            "Pinch the growing tips every couple of weeks to force branching, and snip off any flower buds the moment they appear — once basil flowers, leaf flavor fades and growth slows.",
+        ],
+        "gtk_heading": "Pinch it, and it pays you back",
+        "gtk": [
+            "A single well-tended plant can supply a kitchen all summer. Harvest in the morning when the oils are strongest, and plant basil near tomatoes — they're classic companions in the garden and on the plate alike.",
+        ],
+        "family": "Lamiaceae",
+        "height": "12–24 in",
+        "bloom": "Summer (pinch off)",
+        "native": "Tropical Asia & Africa",
+        "propagation": "Seed or cuttings",
+    },
+    {
+        "slug": "strawberry",
+        "name": "Strawberry",
+        "sci": "Fragaria × ananassa",
+        "category": "fruits",
+        "type": "Perennial",
+        "sun": "Full sun",
+        "water": "1–2 in per week",
+        "harvest": "Late spring–summer",
+        "hardiness": "Perennial · zones 3–10",
+        "meta_desc": "How to grow strawberries (Fragaria × ananassa): full sun, 1–2 inches of water weekly, fruit late spring into summer. Planting and care from Rooted.",
+        "lede": "The first taste of summer, straight from the plant and still warm from the sun. Compact, perennial, and thrilled to grow in a bed, a bag, or a pot.",
+        "about_heading": "Small plant, outsized reward",
+        "about": [
+            "The garden strawberry is a low, spreading perennial that sends out runners — slender stems that root where they touch soil, giving you free new plants each year. Junebearers deliver one big early flush; everbearers and day-neutrals dole out fruit across the season.",
+            "They ask for little more than sun, decent drainage, and a bit of patience: plants set the most fruit in their second year once they've established a strong crown.",
+        ],
+        "care": [
+            "Plant in full sun in rich, well-drained soil, setting the crown right at the surface — buried crowns rot, exposed roots dry out. Mulch with straw to keep berries clean and slugs at bay (it's where the name comes from).",
+            "Water consistently while fruit is swelling, about 1–2 inches a week. Pinch off the first year's flowers to build a stronger plant, and net the patch before the birds find it first.",
+        ],
+        "gtk_heading": "One plant becomes many",
+        "gtk": [
+            "Let a few runners root into pots and you'll have a whole new row to give away or expand with, at no cost. Strawberries also grow beautifully in hanging baskets and rail planters — ideal where space or good soil is short.",
+        ],
+        "family": "Rosaceae",
+        "height": "6–12 in",
+        "bloom": "Spring",
+        "native": "Hybrid origin",
+        "propagation": "Runners or crowns",
+    },
+
+    # ── VEGETABLES — batch 1 ──
+    {
+        "slug": "tomato", "name": "Tomato", "sci": "Solanum lycopersicum", "category": "vegetables",
+        "type": "Warm-season annual", "sun": "Full sun", "water": "1–2 in per week, deep", "harvest": "60–85 days",
+        "hardiness": "Tender · frost-sensitive",
+        "meta_desc": "How to grow tomatoes (Solanum lycopersicum): full sun, deep even water, 60–85 days to harvest. Planting, staking, and care tips from Rooted.",
+        "lede": "The reason most people start a garden — a sun-warmed tomato off the vine tastes like nothing you can buy. Thirsty, hungry, and worth every bit of the fuss.",
+        "about_heading": "The garden's headline act",
+        "about": [
+            "Tomatoes come in two habits worth knowing: determinate types stay compact and ripen one big flush (great for canning), while indeterminate types vine tall all season and keep producing until frost. Both trace back to the Andes, where their wild ancestors still grow.",
+            "They want heat, sun, and steady feeding. Give them those and a sturdy support, and a single healthy plant can hand you tomatoes by the bowlful from midsummer on.",
+        ],
+        "care": [
+            "Plant deep — bury two-thirds of the stem and it'll root along the buried section for a stronger plant. Give full sun and water deeply and evenly; erratic watering causes cracking and blossom-end rot.",
+            "Stake or cage indeterminate types early and pinch the suckers between stem and branch to keep air moving. Feed every few weeks once fruit sets, and pick ripe fruit often to keep more coming.",
+        ],
+        "gtk_heading": "Even, steady water is everything",
+        "gtk": [
+            "Most tomato troubles trace back to inconsistent moisture. Mulch to hold it even, water at the base to keep leaves dry, and you'll dodge most of the diseases that plague them. Basil planted alongside is the classic companion.",
+        ],
+        "family": "Solanaceae", "height": "3–8 ft", "bloom": "Summer", "native": "Western South America", "propagation": "Seed",
+    },
+    {
+        "slug": "bell-pepper", "name": "Bell Pepper", "sci": "Capsicum annuum", "category": "vegetables",
+        "type": "Warm-season annual", "sun": "Full sun", "water": "Keep evenly moist", "harvest": "60–90 days",
+        "hardiness": "Tender · frost-sensitive",
+        "meta_desc": "How to grow bell peppers (Capsicum annuum): full sun, even moisture, 60–90 days to harvest. Planting and care tips from Rooted.",
+        "lede": "Sweet, crisp, and endlessly useful — bell peppers ripen from green through red, gold, and orange, getting sweeter with every day you leave them on the plant.",
+        "about_heading": "Patience turns green to sweet",
+        "about": [
+            "Every colored bell started out green; the reds, yellows, and oranges are simply the same fruit left to fully ripen, which is why they cost more and taste sweeter. They're a warm-season crop from Central and South America that sulks in cold soil.",
+            "Compact and tidy, peppers are happy in the ground or a large pot, asking mainly for warmth, sun, and steady water.",
+        ],
+        "care": [
+            "Wait until nights are reliably warm before planting out — peppers stall in the cold. Give full sun, consistent moisture, and a stake for heavy-bearing plants so branches don't snap.",
+            "Pinch the first flowers to build a bigger plant, then let it set fruit. Harvest green for crunch, or wait for full color and sweetness; either way, cut rather than tug to avoid breaking stems.",
+        ],
+        "gtk_heading": "Warmth is the whole game",
+        "gtk": [
+            "Peppers are slow to start and love heat — black mulch or a warm, sheltered spot noticeably speeds them up. A single plant keeps producing right up to frost if you keep picking.",
+        ],
+        "family": "Solanaceae", "height": "18–30 in", "bloom": "Summer", "native": "Central & South America", "propagation": "Seed",
+    },
+    {
+        "slug": "cucumber", "name": "Cucumber", "sci": "Cucumis sativus", "category": "vegetables",
+        "type": "Warm-season annual", "sun": "Full sun", "water": "1 in+ per week, consistent", "harvest": "50–70 days",
+        "hardiness": "Tender · frost-sensitive",
+        "meta_desc": "How to grow cucumbers (Cucumis sativus): full sun, consistent water, 50–70 days to harvest. Trellising and care tips from Rooted.",
+        "lede": "Fast, prolific, and made for summer — a well-watered cucumber vine will hand you more than you can eat, especially if you pick young and often.",
+        "about_heading": "Grow it up, not out",
+        "about": [
+            "Cucumbers are vigorous vining annuals from South Asia, split into slicing types for fresh eating and picklers for the jar. Left to sprawl they eat space and hide their fruit; given a trellis they climb happily and stay clean and straight.",
+            "They're mostly water, so consistent moisture is the difference between crisp and bitter.",
+        ],
+        "care": [
+            "Sow in warm soil in full sun and train the vines up a trellis or netting to save space and keep fruit off the ground. Water deeply and evenly — dry spells make cucumbers bitter and misshapen.",
+            "Pick often and while young; a few oversized fruit left on the vine signal the plant to stop producing. Harvesting every day or two keeps the flush coming for weeks.",
+        ],
+        "gtk_heading": "Pick young, pick often",
+        "gtk": [
+            "The single best thing you can do for yield is to harvest constantly — every cucumber you leave to fatten slows the whole plant down. Bees do the pollinating, so avoid spraying while it's in flower.",
+        ],
+        "family": "Cucurbitaceae", "height": "Vining, 3–6 ft", "bloom": "Summer", "native": "South Asia", "propagation": "Seed",
+    },
+    {
+        "slug": "zucchini", "name": "Zucchini", "sci": "Cucurbita pepo", "category": "vegetables",
+        "type": "Warm-season annual", "sun": "Full sun", "water": "Deep, consistent water", "harvest": "45–55 days",
+        "hardiness": "Tender · frost-sensitive",
+        "meta_desc": "How to grow zucchini (Cucurbita pepo): full sun, deep consistent water, 45–55 days to harvest. Planting and care tips from Rooted.",
+        "lede": "The garden's overachiever — one healthy plant can bury you in fruit by midsummer. Pick young and often, and check under those big leaves every day.",
+        "about_heading": "One plant, more than enough",
+        "about": [
+            "Zucchini is a bush-type summer squash that grows fast and produces relentlessly — the running joke about neighbors locking their cars in August exists for a reason. It's a New World crop, easy from seed sown right where it'll grow.",
+            "The big leaves and quick pace make it satisfying for beginners, as long as you stay ahead of the harvest.",
+        ],
+        "care": [
+            "Sow in warm, rich soil in full sun, giving each plant room — they get large. Water deeply and consistently at the base; the broad leaves wilt dramatically in heat but usually recover by evening.",
+            "Check daily once fruiting starts and pick at 6–8 inches, when they're tender. Miss a few days and you'll find baseball-bat squash and a plant that's slowed down.",
+        ],
+        "gtk_heading": "Blossoms are dinner too",
+        "gtk": [
+            "The bright squash blossoms are a delicacy — stuff and fry the male flowers (the ones on thin stems) and you'll still get plenty of fruit from the females. If fruit rots at the tip, it's usually a pollination hiccup that sorts itself out.",
+        ],
+        "family": "Cucurbitaceae", "height": "2–3 ft (bushy)", "bloom": "Summer", "native": "The Americas", "propagation": "Seed",
+    },
+    {
+        "slug": "lettuce", "name": "Lettuce", "sci": "Lactuca sativa", "category": "vegetables",
+        "type": "Cool-season annual", "sun": "Full sun to part shade", "water": "Keep evenly moist", "harvest": "30–60 days",
+        "hardiness": "Hardy · cool-season",
+        "meta_desc": "How to grow lettuce (Lactuca sativa): cool weather, steady moisture, 30–60 days to harvest. Planting and cut-and-come-again tips from Rooted.",
+        "lede": "The fastest reward in the garden — sow a pinch of seed and you're picking salad in a month. Loves the cool shoulders of the year and a bit of afternoon shade in heat.",
+        "about_heading": "Quick, cool, and generous",
+        "about": [
+            "Lettuce is a cool-season crop that runs the gamut from loose leaf to crisp romaine to tight butterheads. Leaf types are the easiest and quickest, ready to cut in as little as a month and happy in a container or a window box.",
+            "Heat is its enemy: when it gets hot, lettuce 'bolts' — shooting up a flower stalk and turning bitter.",
+        ],
+        "care": [
+            "Sow in spring and again in late summer for a fall crop; in summer heat, give afternoon shade to slow bolting. Keep the soil consistently moist — dry spells turn leaves bitter and tough.",
+            "Harvest leaf types cut-and-come-again: take the outer leaves and let the center keep growing, or shear the whole plant an inch above the crown and it'll often regrow.",
+        ],
+        "gtk_heading": "Sow a little, often",
+        "gtk": [
+            "A short row every couple of weeks beats one big planting — you'll have tender lettuce for months instead of a glut that all bolts at once. It also grows beautifully tucked between slower crops.",
+        ],
+        "family": "Asteraceae", "height": "6–12 in", "bloom": "Bolts in heat", "native": "Mediterranean & W. Asia", "propagation": "Seed",
+    },
+    {
+        "slug": "carrot", "name": "Carrot", "sci": "Daucus carota", "category": "vegetables",
+        "type": "Cool-season root", "sun": "Full sun", "water": "Even, consistent moisture", "harvest": "60–80 days",
+        "hardiness": "Hardy · cool-season",
+        "meta_desc": "How to grow carrots (Daucus carota): full sun, loose soil, even moisture, 60–80 days to harvest. Sowing and thinning tips from Rooted.",
+        "lede": "Sweetest straight from the ground, and sweeter still after a frost. The whole trick is loose, stone-free soil and the patience to thin them.",
+        "about_heading": "It's all about the soil",
+        "about": [
+            "Carrots are cool-season roots that store their sugar underground — which is why a carrot pulled after a light frost tastes noticeably sweeter than any from a shelf. They come in far more than orange: purple, white, yellow, and red are all easy from seed.",
+            "The one thing they insist on is loose, deep, rock-free soil; hit a stone or hard clay and the root forks or stunts.",
+        ],
+        "care": [
+            "Sow seed directly where they'll grow — carrots hate being transplanted — into loosened, stone-free soil in full sun. Keep the surface evenly moist during the slow germination, which can take two to three weeks.",
+            "Thin the seedlings to an inch or two apart once they're up; crowded carrots stay small and tangled. It feels ruthless, but it's the single biggest factor in getting good roots.",
+        ],
+        "gtk_heading": "A frost makes them sweeter",
+        "gtk": [
+            "Leave carrots in the ground into cool weather and they convert starch to sugar for their own protection — free flavor. In mild areas you can mulch heavily and harvest through much of the winter.",
+        ],
+        "family": "Apiaceae", "height": "Tops to 12 in", "bloom": "2nd year (biennial)", "native": "Eurasia", "propagation": "Seed",
+    },
+    {
+        "slug": "kale", "name": "Kale", "sci": "Brassica oleracea", "category": "vegetables",
+        "type": "Hardy leafy green", "sun": "Full sun to part shade", "water": "1–1.5 in per week", "harvest": "55–75 days",
+        "hardiness": "Very hardy · frost-sweetened",
+        "meta_desc": "How to grow kale (Brassica oleracea): full sun, steady water, 55–75 days, sweeter after frost. Planting and harvest tips from Rooted.",
+        "lede": "The workhorse green that laughs at frost — kale keeps producing long after tender crops have quit, and a cold snap only makes it sweeter.",
+        "about_heading": "Tougher than the weather",
+        "about": [
+            "Kale is a non-heading member of the cabbage family, grown for its endlessly-pickable leaves — curly, flat 'lacinato' (dinosaur) kale, and red Russian types among them. It's one of the most cold-hardy vegetables you can grow, standing through frost and light snow.",
+            "That toughness makes it a fall and winter staple in much of the country, and a very forgiving crop for beginners.",
+        ],
+        "care": [
+            "Plant in full sun (part shade in hot regions) in rich soil, and keep it watered for tender leaves. It grows through spring and, sown again in midsummer, straight into winter.",
+            "Harvest the lowest, oldest leaves first and let the plant keep growing from the center — a single kale plant can crop for months this way. Watch for cabbage worms and pick them off by hand.",
+        ],
+        "gtk_heading": "Wait for the frost",
+        "gtk": [
+            "Kale genuinely tastes better after a hard frost, which triggers it to sweeten. Plant a summer round specifically for fall and winter eating and you'll see the difference.",
+        ],
+        "family": "Brassicaceae", "height": "1–2 ft", "bloom": "2nd year (biennial)", "native": "Eastern Mediterranean", "propagation": "Seed",
+    },
+    {
+        "slug": "garlic", "name": "Garlic", "sci": "Allium sativum", "category": "vegetables",
+        "type": "Overwintering bulb", "sun": "Full sun", "water": "Moderate, then dry down", "harvest": "8–9 months",
+        "hardiness": "Hardy · fall-planted",
+        "meta_desc": "How to grow garlic (Allium sativum): plant cloves in fall, full sun, harvest the following summer. Planting and curing tips from Rooted.",
+        "lede": "Plant it now and forget it — cloves tucked in before the cold quietly build all winter for a midsummer harvest. The easiest crop you'll grow, and the most satisfying to braid.",
+        "about_heading": "Fall's plant-and-forget crop",
+        "about": [
+            "Garlic is grown from individual cloves, planted in fall so they root before winter and race away in spring. Hardneck types suit cold regions and throw edible flower stalks ('scapes'); softnecks store longer and are the ones you braid.",
+            "It asks almost nothing over its long season, which makes it one of the most rewarding things a beginner can grow.",
+        ],
+        "care": [
+            "In fall, split a bulb and plant the biggest cloves pointy-end up, a few inches deep, in full sun and rich, well-drained soil. Mulch over winter; growth resumes as the ground warms.",
+            "Snap off hardneck scapes in early summer (they're delicious) to push energy into the bulb. Stop watering as the lower leaves brown, then lift, and cure the bulbs in a dry, airy spot for a couple of weeks.",
+        ],
+        "gtk_heading": "Save your best to replant",
+        "gtk": [
+            "Set aside a few of your largest, healthiest bulbs each summer to plant that fall — over a few seasons your garlic adapts to your garden and gets better. Supermarket garlic is often treated to resist sprouting, so start with seed garlic.",
+        ],
+        "family": "Amaryllidaceae", "height": "12–18 in", "bloom": "Scapes (hardneck)", "native": "Central Asia", "propagation": "Cloves",
+    },
+]
