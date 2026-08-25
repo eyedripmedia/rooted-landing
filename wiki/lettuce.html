@@ -31,7 +31,7 @@
   .brand{display:flex;align-items:center;gap:10px;}
   .logo{width:36px;height:36px;border-radius:9px;flex:0 0 auto;display:block;}
   .brand b{font-family:'Fraunces',serif;font-style:italic;font-weight:600;font-size:19px;}
-  .navcta{background:var(--forest);color:var(--cream);padding:9px 16px;border-radius:22px;font-size:13px;text-decoration:none;}
+  .navcta{background:var(--terra);color:#fff;padding:9px 18px;border-radius:22px;font-size:13px;text-decoration:none;box-shadow:0 2px 8px rgba(196,116,84,.28);}
   .wrap{max-width:1080px;margin:0 auto;padding:0 22px;}
   .hero{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center;padding:44px 0 34px;}
   /* HERO SLOT — Phase 1: branded tinted panel. Phase 2: swap inner for the user's uploaded photo (an img tag). Same slot, same og:image variable. */
@@ -67,6 +67,7 @@
   .dlrow{display:flex;gap:14px;align-items:center;position:relative;}
   .applink{display:inline-block;text-decoration:none;}
   .applink img{height:48px;width:auto;display:block;}
+  .dl .applink{display:table;margin-left:auto;margin-right:auto;}
   .band{background:var(--forest);color:var(--cream);margin-top:26px;}
   .band-in{max-width:1080px;margin:0 auto;padding:52px 22px;text-align:center;}
   .band .kk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--terra);}
@@ -104,7 +105,7 @@
 <body>
   <nav><div class="nav-in">
     <div class="brand"><img class="logo" src="/assets/brand/app-icon.png" alt="Rooted app icon"><b>Rooted</b></div>
-    <a class="navcta" href="#get">Get the app</a>
+    <a class="navcta" href="https://apps.apple.com/us/app/rooted-garden-companion/id6761402824">Try for Free</a>
   </div></nav>
 
   <div class="wrap">
@@ -158,7 +159,7 @@
           <div class="glow"></div>
           <div class="kk">Free app</div>
           <h3>Identify any plant in seconds</h3>
-          <p>Point your camera and get the species, care schedule, and growing guide — free, on iPhone.</p>
+          <p>Point your camera and get the species, care schedule, and growing guide — free on the App Store.</p>
           <a class="applink" href="https://apps.apple.com/us/app/rooted-garden-companion/id6761402824"><img src="/app-store-badge.svg" alt="Download Rooted on the App Store"></a>
         </div>
         <div style="margin-top:18px;">
@@ -199,7 +200,7 @@
     <div class="gate-card">
       <img class="gate-logo" src="/assets/brand/app-icon.png" alt="Rooted app icon">
       <h3>Identify any plant with a snap</h3>
-      <p>Point your camera for an instant ID — plus care, a watering schedule, and a full growing guide. Free on iPhone.</p>
+      <p>Point your camera for an instant ID — plus care, a watering schedule, and a full growing guide. Free on the App Store.</p>
       <a class="gate-btn" href="https://apps.apple.com/us/app/rooted-garden-companion/id6761402824">Try Rooted for Free</a>
       <button class="gate-dismiss" type="button" onclick="document.getElementById('rooted-gate').classList.remove('show')">Continue reading</button>
     </div>
