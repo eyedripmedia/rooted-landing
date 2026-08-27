@@ -8,6 +8,14 @@
     {
       "source": "/s/:id",
       "destination": "https://rooted-backend-production.up.railway.app/s/:id"
+    },
+    {
+      "source": "/plants",
+      "destination": "https://rooted-backend-production.up.railway.app/plants"
+    },
+    {
+      "source": "/sitemap.xml",
+      "destination": "https://rooted-backend-production.up.railway.app/sitemap.xml"
     }
   ]
 }
