@@ -23,6 +23,18 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     :root { --forest: #174038; --sage: #EDF0E8; --cream: #FBFAF6; --terracotta: #C47454; --cream-sage: #c8dbb0; --sage-muted: #75806C; --ink: #2a2f28; }
+    html { scroll-behavior: smooth; }
+    .topbar { position: sticky; top: 0; z-index: 50; background: var(--forest); border-bottom: 1px solid rgba(200,219,176,0.14); }
+    .topbar-in { max-width: 1080px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; }
+    .tb-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .tb-brand img { width: 34px; height: 34px; border-radius: 9px; display: block; }
+    .tb-brand b { font-family: 'Fraunces', Georgia, serif; font-style: italic; font-weight: 600; font-size: 19px; color: var(--cream); }
+    .tb-links { display: flex; align-items: center; gap: 24px; }
+    .tb-links a { font-family: -apple-system, sans-serif; font-size: 14.5px; color: var(--cream-sage); text-decoration: none; transition: color 0.2s; }
+    .tb-links a:hover { color: #fff; }
+    .tb-cta { background: var(--terracotta); color: #fff !important; padding: 10px 20px; border-radius: 24px; box-shadow: 0 2px 10px rgba(196,116,84,0.3); }
+    #features { scroll-margin-top: 74px; }
+    @media (max-width: 640px) { .tb-links a:not(.tb-cta) { display: none; } }
     body { font-family: Georgia, 'Times New Roman', serif; background: var(--sage); color: var(--ink); line-height: 1.6; -webkit-font-smoothing: antialiased; }
     .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
     .kicker { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sage-muted); display: inline-flex; align-items: center; gap: 12px; margin-bottom: 20px; }
@@ -107,9 +119,16 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Rooted","url":"https://growwithrooted.com"}</script>
 </head>
 <body>
+  <nav class="topbar"><div class="topbar-in">
+    <a class="tb-brand" href="/"><img src="assets/brand/app-icon.png" alt="Rooted app icon"><b>Rooted</b></a>
+    <div class="tb-links">
+      <a href="/plants">Field Guide</a>
+      <a href="#features">How it works</a>
+      <a class="tb-cta" href="https://apps.apple.com/app/id6761402824">Try for Free</a>
+    </div>
+  </div></nav>
   <section class="hero"><div class="wrap hero-grid">
     <div class="hero-copy">
-      <img class="hero-logo" src="assets/brand/logo-mark.png" alt="Rooted" />
       <span class="kicker kicker--light">Now on the App Store</span>
       <h1>Know your roots.<br /><span class="accent">Grow</span> your garden.</h1>
       <p class="hero-lede">The garden companion for people who actually grow food — outdoors, in beds, in the ground.</p>
@@ -120,7 +139,7 @@
     </div>
     <div class="hero-visual"><div class="phone"><div class="phone-screen"><video src="assets/video/hero-loop.mp4" autoplay muted loop playsinline></video></div></div></div>
   </div></section>
-  <section class="wedge"><div class="wrap">
+  <section class="wedge" id="features"><div class="wrap">
     <h2>Not another houseplant app.</h2>
     <p>Rooted is built for the <span class="terra">vegetable garden</span> — the raised beds, the tomatoes, the harvest. Real growing, done well.</p>
   </div></section>
