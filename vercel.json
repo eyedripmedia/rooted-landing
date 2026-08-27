@@ -16,6 +16,10 @@
     {
       "source": "/sitemap.xml",
       "destination": "https://rooted-backend-production.up.railway.app/sitemap.xml"
+    },
+    {
+      "source": "/admin/:path*",
+      "destination": "https://rooted-backend-production.up.railway.app/admin/:path*"
     }
   ]
 }
